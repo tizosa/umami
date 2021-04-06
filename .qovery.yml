@@ -1,17 +1,17 @@
 ---
 application:
   name: "umami"
-  project: "Test"
+  project: "stats"
   organization: "QoveryCommunity"
   storage:
-  - name: "data"
-    size: "20"
+  - name: "disk"
+    size: "60"
     type: "fast_ssd"
-    mount_point: "/q"
+    mount_point: "/"
 databases:
-- type: "POSTGRESQL"
-  name: "psq"
-  version: "11"
+- type: "MYSQL"
+  name: "sqlo"
+  version: "8.0"
 routers:
 - name: "main-umami"
   routes:
