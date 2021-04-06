@@ -1,0 +1,20 @@
+---
+application:
+  name: "umami"
+  project: "Test"
+  organization: "QoveryCommunity"
+  storage:
+  - name: "data"
+    size: "20"
+    type: "fast_ssd"
+    mount_point: "/q"
+databases:
+- type: "POSTGRESQL"
+  name: "psq"
+  version: "11"
+routers:
+- name: "main-umami"
+  routes:
+  - application_name: "umami"
+    paths:
+    - "/*"
